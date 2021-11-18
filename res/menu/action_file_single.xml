@@ -6,7 +6,7 @@
         android:icon="@drawable/ic_rename"
         android:orderInCategory="4"
         android:showAsAction="ifRoom"
-        android:title="@string/rename"
+        android:title="change_name"
         android:visible="true"/>
 
     <item
