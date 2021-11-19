@@ -20,6 +20,8 @@
  ******************************************************************************/
 package com.michaldabski.filemanager.folders;
 
+import static com.michaldabski.utils.FileUtils.DISPLAY_NAME_SD_CARD;
+
 import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -33,6 +35,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.ActionMode;
@@ -379,8 +382,18 @@ public class FolderFragment extends Fragment implements OnItemClickListener, OnS
 					fragment.setArguments(args);
 					FolderActivity activity = (FolderActivity) getActivity();
 					activity.showFragment(fragment);
-					
+
 				}
+				return true;
+
+			case R.id.menu_home:
+				String home="/storage/emulated/0";
+				Bundle args = new Bundle(1);
+				args.putString(EXTRA_DIR, home);
+				FolderFragment fragment = new FolderFragment();
+				fragment.setArguments(args);
+				FolderActivity activity = (FolderActivity) getActivity();
+				activity.showFragment(fragment);
 				return true;
 				
 			case R.id.menu_favourite:				
