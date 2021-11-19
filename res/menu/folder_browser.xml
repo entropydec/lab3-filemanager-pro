@@ -75,4 +75,10 @@
         android:title="@string/create_folder"
         android:visible="true"/>
 
+    <item
+        android:id="@+id/menu_home"
+        android:orderInCategory="6"
+        android:showAsAction="ifRoom"
+        android:title="Home"
+        android:visible="true"/>
 </menu>
